@@ -83,117 +83,6 @@ def     lilo_search_engine (s_dork, i_npage, i_debug):
 
 
 
-def     givewater_search_engine (s_dork, i_npage, i_debug):
-
-        i = 0
-        new = ""
-        urls = []
-        trace_indice = "web-bing__title\" href=\"http"
-        p = 1
-
-        while (p <= i_npage):
-
-            try:
-
-                i = 0
-
-                print colored("\n[<Serial "+str(p)+">]", 'cyan')
-                url = "https://search.givewater.com/serp?q="+s_dork+"&page="+str(p)+"&sc=i03-9v1s5NWiP_yoZ8YxrTu4M1eFvqim_aS4F_kgIB6FdLzUgPT1FPBO7DjpkzYD0fbRieBK8-s-1dNoQBIYceJHdwQjCK-GFCDpPiVx5q1CsoRpTBcOd9wHjeiW157l9nsxYapgLPPRZSzIuD9PJzO4VJCZCJrps5T7pZ3YjXCgBPIgAFEZY0ZAALLgjkYPV1EI3MW39imm5neF9RlgE04R--uAGo5eTJOvfzpkzMyKLPPieXqrPz9pxdO0h9Ojg_I5HItb4erBg2IykQxtxD8bMYjj2UHrIqEUkFfEAeYb1wgzLzobHzGrKpnqo42Gg8OgqofpwObm_wNqaYlTkLiCOOZhbjm0Ld5901zvWaJSV2u66zVm-f53LEVfLfpYD2E8X-Y6_cmUrGYVPvM-Cviw4cg7tzrydFGB7m12zx1Q0AKmEVH2H0K9FzZ2dN2gzs4vaKv5C1-m-0EwohR72HMQBhOpPYLnWyPt9Om0O4hLCssbnGZA3KQic9xv1aKLn6iufs474ZD1ozWSeLkyQC7zRbSU7n_mvVK6UN7R6EsE3g0FNje6n6dWvh-hRx8AVnrVb5i37xIUTGdhLBovCqZ3YyJWlfrQrcylhphDNkEV6BfHWVOYyPHGUtVMpE_ud6iLYr3YJvMGb2-s7oNidHEOEO6mo8klfy-1rRG4NNzPTuebO4C7DNZMMnZ7yvinG_weH4lrLZYJBbiWL50W0AAhPoqJKpo82UMtzzdl-ElldG-iS7h0geWYCbXyuL6_b4Is1MDFgURapXvW0CiWllc8vXacnPUiMwUwjGd9-8tUzeJFlPIIP1-mqhWVVSgZ7c1c50bxwPV9nkG-DJIhRT5xmo5lTP7Kr2NtYSVh82c6m-Fr72E4IdsJLuLWOFqsYZIp34WOt2boMmY8aHc5gsqJCVdbY2u8C98RfNs9zbVK0RblCqO9bG9nayzJS8Bq96xx14M4GVOiaz4WZ733uxeV9I7pTRmvrpJ2iGgx2G1Na3Z9tBzYVCjAwckBKXdXvJK3J-fAdYBSkMNqDF_35SyQpKMcaHhGlY8Mss_qlRlzdAFN-KHyQFYAudK2YC1D2o_EzMLJ6ugZsJc99xgljIP66d3K7GsN4l-uRui6OC7J9B0aiqDaJBpPO3E-q4sgSC2eXXgHchiRcbRyX6vgWcX13m-LCdRtbBTM-R496AwEM3R-z2N8flJyPAxGUIKohqS2MxfCHpkihZMtjnsORsTeVUzvEuUE6oqKiKR2zoxbaJ3q2shii8HH3IIotkZ_dsSo3uOW2pYYfIP7r_dcDzE2bantinE3G9g0wlfiSAeBCM6sZJTdVnRRhk3wFBovLkLNNxpW-NgTgNW7jsofQyXyDJxKg848O6d2Qzv1ip9wy7IsfqAQ3XW-elClobg94vyK5OdQsGhe-SGw0RxZIYRVeX2KTT6PWynPpIWgdKpmCtVZfowZrwLi_akIluvUirP7DqpHE8ICiHVtib4itzvn2QGgC1d33bSpFlXcoczGYkhu1WLQOCLYt6QmviekLtAXSnoV9G7Pmg2pYBQ8nPkcWUZ0cqIYlupYkh8z42nH43Z5hDnrUHtPAxt7gE_o-V0SYDleMZDp8ncWkkXck9PCmaHbh02zO_SsNLMJ48N0OljjOZL0fALCfDnYC6pAKvl-lmRIWK8e4L6OmarexU7zGtkHHoM631qwJjdsAu7brLiJS1WirtNgsgEB9KGsBN-6O-P8HaXSE2rNnIJAz3yPwKZKzma2-IXpCtmp7BC-DkxB6CHXmoErgrNoP81Oauhx8pU9ZRJEkmC-4hEvWtjALz9zLi65jyr1PTO5mwohHDRqIhqjBk-LZhpaLJqsIU8EVfYreGMBIw"
-                user_agent = rand_agent()
-                headers = {'User-Agent': user_agent}
-                print colored("[*] User-Agent: "+user_agent, 'green')
-                if (i_debug == 1):
-                    print ("user-agent -> "+user_agent)
-
-                req = requests.get(url, headers=headers, cookies = {"favcolor": "Red"})
-                data = req.text.encode('utf-8')
-
-                if (i_debug == 2):
-                    print ("data req.get.text -> "+data)
-
-                while (data.find(trace_indice, i) != -1):
-                    i = data.find(trace_indice, i)+23
-                    while (data[i] != '"'):
-                        new += data[i]
-                        i += 1
-                    if (i_debug == 1):
-                        print ("url found -----> "+new)
-                    urls.append(new)
-                    print colored("[!] URL Found: "+new)
-                    new = ""
-
-
-            except requests.exceptions.ConnectionError:
-                print colored(" [-] Request Error, ignored ... ", 'cyan')
-            except requests.exceptions.TooManyRedirects:
-                print colored(" [-] Request Error, ignored ... ", 'cyan')
-            except requests.exceptions.ReadTimeout:
-                print colored(" [-] Request Timeout, ignored ... ", 'cyan')
-
-            p += 1
-
-            if (i_debug == 1):
-                print ("urls list --> ")
-                print (urls)
-
-
-        return list(urls)
-
-
-def     webcrawler_search_engine (s_dork, i_npage, i_debug):
-
-        i = 0
-        new = ""
-        urls = []
-        trace_indice = "title\" href=\""
-        p = 1
-
-        while (p <= i_npage):
-            try:
-                i = 0
-
-                print colored("\n[<Serial "+str(p)+">]", 'cyan')
-                url = "https://www.webcrawler.com/serp?q="+s_dork+"&page"+str(p)+"&sc=j2CJ-kiroG5uG0eULxdYivaT1cI-0HN7jRIHRM-8-8coMszVKI8XOYxsdpeyNlmMGv7pPkcMvf6SXakfjpTD03cHjt74yTiEeHX3viYm3rp84KfcaFTfhH-S_QmF8EMmnR_Y1F5pUOZUDTldnMoR7PS7ohd4DDA3oX-NrM_Z0MRM9QM5dyDt7p-0hlz76k3hMdCSNV8jHtZHPKe2q8ccZuhOqvMiMHgk3gQ47DKCtciMAntt-mLlRr4grECqHDx8-lslzYfCItV6CG2HzeM2pWWXRpZssxe-DfUjp6m9hVpUtj20JBnmDsdUtbMQhPIgRaf3B2-sog-gRN0tmvUrHdNzoHA9xn0upXaw11wFIo7eejkvIl31ooarBTJsdqFttT44lQOuZQmJYYGtZW8dd-2TeYNn-Ki9Ufpw6jYSw_Piq0HvbOYR-XNR4z2UMBlfQ6G9vhz-8PvMMA_pT30U5mgrO7Y4rRt59PR6tBu9FfG9_-EDrBHTKOpLcTVjzf55b6d22KL3wseTSbsCqICyvOxuoRa6TWBJvBnH30g9cQfXVLw5L0mPPHzURyPmhKA3hnsutT9MiKVurtGQvZaCeaxaRlvlMvo0cd9y5oeghNPnUzpou3JJz_hbyG3m46vKHanqHakzSdpfHFfCClM4Nrh6M0EfdMdx-kGgkD-m2kKKqc7xdw-OOnetWOuF-2psv4pb9ZBMTtVt24EiSpkeaxyDVx-4BobeChSB0fMzNCLzh3NOtXoDEzIPOjak62NZJ8vl7sWwbsnPojApADXDZEDJ0dDjZFZD1OlY1bCZZ5GlGMAwCWZK78ObzDUdxBkgqokuPCXCWln9SwF_HdNGNyBlGwt4n15NCxxPo1DfWONrujC0VgOOxIwVo8EddOELXjEQIO7DQxhnAwIjgAMxXT39Q9uy1hQXgyTvTxPHNsxJslj7ufJifUAQIFGl9_z8n_5avbbBeAF_F0dJQvyolKviKMaErzQYXQbNhI0OARVg9AwzXUggI_pUKitprtsWq8__EL_JM1g6mSWXuP7tEIOucJ9mNe7xqFlBrNMZZFeebbJHLMH9t5t1-QScyfEzh4Z302OSC1wbaW9S3CX4gOpSYG3yh1SZPkrgJs80qh3adghQoKV7NkS0s8MXvkNSp3PvDP-JVCdzgpju4S5V_PdHhirmhPXwP3UU2k9ZSCJ8C6HuuKOoAnKGEMdkcbDm2kowHHAnG6HqDyO81p0mgkPaKb6G1Ny8leNbl9UCa9DF8-_LTh3jIUZxQBtrwBxyiwZnR2WZBPOFKpYmgAPHL09tFAQY7jJFpt_hiI3EJwCBUmjfrGzDlwLVHYA4yU3l4b8RIxSkkeHqOFSWLqs7mVanxpcUXJFZmo_mNsLYrt5kOnpgk7G1xxrN0b-giIVgc0aeGTUBziD5ONzj0lXNZ3ufoLbZYgj3L8rptnCFrUyVmfaQRqcRmA7ecWaQzrQxXygQZvuUxtr3hmYde6T36IZAoN2SuYL7OpH6P_e5j_ccY73DBNDgQ42AIkV5I8Qjkw9n4qb2JGVkcMjkqyFh6ViDImK0Dsx4h_8HQfxnWq67v2tIetmc2e35SgBm_HvorpIsRVsuWZcvfBkfNBGk8mBw_AjV5LOTp5eNUbtpM_AIwJC6PXEKB8bqAYScn5JUthx8nCn7cmOC-Xi8ss1AeZsaE5HsC7DLpz3k0qs-Bc_gqRA09mZkyw5QOA-sEk38TTV-xpP9rn_if6j03JYFwIMASGADPv7Gp-QU3PhiUIwmXhBfyLNs7z_Bfmf_h2wBblEyOPUsHCnoG1pqB90xTqAiO1nyoJc02Jsa25MYvYmCbSCxUEvAuThEj4BLhqW6F0hw9uS2Hjtl8bZAPDPxfL9wOw"
-
-                user_agent = rand_agent()
-                headers = {'User-Agent': user_agent}
-                print colored("[*] User-Agent: "+user_agent, 'green')
-                if (i_debug == 1):
-                    print ("user-agent -> "+user_agent)
-
-                req = requests.get(url, headers=headers, cookies = {"favcolor": "Red"})
-                data = req.text.encode('utf-8')
-
-                if (i_debug == 2):
-                    print ("data req.get.text -> "+data)
-
-                while (data.find(trace_indice, i) != -1):
-                    i = data.find(trace_indice, i)+13
-                    while (data[i] != '"'):
-                        new += data[i]
-                        i += 1
-                    if (i_debug == 1):
-                        print ("url found -----> "+new)
-                    urls.append(new)
-                    print colored("[!] URL Found: "+new)
-                    new = ""
-
-            except requests.exceptions.ConnectionError:
-                print colored(" [-] Request Error, ignored ... ", 'cyan')
-            except requests.exceptions.TooManyRedirects:
-                print colored(" [-] Request Error, ignored ... ", 'cyan')
-            except requests.exceptions.ReadTimeout:
-                print colored(" [-] Request Timeout, ignored ... ", 'cyan')
-            p += 1
-
-            if (i_debug == 1):
-                print ("urls list --> ")
-                print (urls)
-
-
-        return list(urls)
-
-
 
 def     urlslist_filter (list_urls, list_filter):
     
@@ -644,7 +533,6 @@ def     virax_search_engine (s_dork, i_npage, i_debug, s_SQLi, s_outfile, i_time
         i = 0
         urls = []
         
-        #urls = list(set(webcrawler_search_engine(s_dork, i_npage, i_debug)) + set(givewater_search_engine(s_dork, i_npage, i_debug) + set(lilo_search_engine(s_dork, i_npage, i_debug))))
         urls = list(set(lilo_search_engine(s_dork, i_npage, i_debug)))
 
 
