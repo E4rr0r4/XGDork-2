@@ -10,7 +10,7 @@ A simple 'naive' python tool to find SQLi Vulnerable websites in the wild.
   - SQL Dumper Module (Basic) - Please wait for the next update
   - Simple Tools - Please wait for the next update
 
-![alt text](https://ibb.co/NYvrs0Q)
+!(https://ibb.co/NYvrs0Q)
 
 --- Setup ---
 - install Python 2.7 / on Termux 'pkg install python2'
