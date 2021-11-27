@@ -1,0 +1,13 @@
+######
+
+XGDork² - SQLi Google Dork Scanner
+original code by ViraX (E4rr0r4)
+
+version: [²] beta-20112021
+
+[Next update]
+- Optimization and improvement
+- SQL Dumper Module
+- Simple Tools
+
+######
