@@ -1,6 +1,6 @@
 # XGDork² - ViraX Google Dork Scanner
 
-<a href="https://ibb.co/HK7mYgG"><img src="https://i.ibb.co/D143kKw/XGDork-2-LOGO.png" alt="XGDork-2-LOGO" border="0" /></a>
+<a href='https://postimg.cc/4mpYj4P2' target='_blank'><img src='https://i.postimg.cc/4mpYj4P2/XGDork-2-LOGO.png' border='0' alt='XGDork-2-LOGO'/></a>
 
 SQLi Google Dork Scanner by ViraX @ 2021
 - for Python 2.7 - compatible Android(NoRoot) - Termux
