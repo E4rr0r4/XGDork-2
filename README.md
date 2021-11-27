@@ -29,3 +29,9 @@ version: [²] beta-20112021-FreeSoftware
 
 - Contributor(s)/Source(s)
   * SQLmap 'agents file' - https://github.com/sqlmapproject/
+
+------
+if you want to buy me a coffee ;)
+* Bitcoin 3BbEBY3JTYX9ihpc1BzKkNeZbaVckLENbQ
+* Ethereum 0x019aa9b35b3528841d04394c3b3ee2ff730bcfe6
+* Tether 3HF6TpDEo1joY7hF3Fe6i3s6nATM37GM5V
