@@ -14,6 +14,8 @@ A simple 'naive' python tool to find SQLi Vulnerable websites in the wild.
 
 <a href="https://ibb.co/NYvrs0Q"><img src="https://i.ibb.co/tCGz40k/XGDork-2-V-censured.png" alt="XGDork-2-V-censured" border="0" /></a>
 
+
+
 --- Setup ---
 - install Python 2.7 / on Termux 'pkg install python2'
 - pip/pip2 install requests
