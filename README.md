@@ -1,8 +1,8 @@
-# XGDork² - ViraX Google Dork Scanner
+# XGDork² - SQLi Google Dork Scanner
 
 <a href='https://postimg.cc/4mpYj4P2' target='_blank'><img src='https://i.postimg.cc/4mpYj4P2/XGDork-2-LOGO.png' border='0' alt='XGDork-2-LOGO'/></a>
 
-SQLi Google Dork Scanner by ViraX @ 2021
+By ViraX (E4rr0r4) @ 2021
 - for Python 2.7 - compatible Android(NoRoot) - Termux
 
 A simple 'naive' python tool to find SQLi Vulnerable websites in the wild.
@@ -13,6 +13,8 @@ A simple 'naive' python tool to find SQLi Vulnerable websites in the wild.
   - Simple Tools - Please wait for the next update
 
 <a href="https://ibb.co/NYvrs0Q"><img src="https://i.ibb.co/tCGz40k/XGDork-2-V-censured.png" alt="XGDork-2-V-censured" border="0" /></a>
+
+(the tool is still under development, additions, improvements and bug fixes are planned)
 
 --- Setup ---
 - install Python 2.7 / on Termux 'pkg install python2'
@@ -29,3 +31,9 @@ version: [²] beta-20112021-FreeSoftware
 
 - Contributor(s)/Source(s)
   * SQLmap 'agents file' - https://github.com/sqlmapproject/
+
+------
+if you want to buy me a coffee ;)
+* Bitcoin 3BbEBY3JTYX9ihpc1BzKkNeZbaVckLENbQ
+* Ethereum 0x019aa9b35b3528841d04394c3b3ee2ff730bcfe6
+* Tether 3HF6TpDEo1joY7hF3Fe6i3s6nATM37GM5V

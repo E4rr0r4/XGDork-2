@@ -1,6 +1,5 @@
 ######
 =======
-
 XGDork² - SQLi Google Dork Scanner
 original code by ViraX (E4rr0r4)
 GNU General Public License v3.0
