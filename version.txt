@@ -1,19 +1,19 @@
 ######
-<<<<<<< HEAD
-
 =======
->>>>>>> ed484dc262068f862dda308e4cefbe1a00b22c3b
+
 XGDork² - SQLi Google Dork Scanner
 original code by ViraX (E4rr0r4)
+GNU General Public License v3.0
 
-version: [²] beta-20112021
+version: [²] beta-07122021
+
+old version:
+- beta-20112021
 
 [Next update]
 - Optimization and improvement
 - SQL Dumper Module
 - Simple Tools
-<<<<<<< HEAD
 
 =======
->>>>>>> ed484dc262068f862dda308e4cefbe1a00b22c3b
 ######

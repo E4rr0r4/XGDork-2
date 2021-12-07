@@ -23,3 +23,14 @@ exploit-db
 moodle.org
 stackoverflow.com
 /serp?q=
+github
+scribd
+facebook
+bugs
+stackoverflow
+reddit
+www.php.net
+sql-injection
+injection-sql
+xooit
+XGDork
